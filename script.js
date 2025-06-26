@@ -374,3 +374,45 @@ pauseButton.addEventListener('click', function() {
 
     if (isPaused) {
         startingScreen.style.display = 'flex';
+        document.getElementById('startingText').innerText = 'The game is paused. Use WASD to unpause';
+    } else {
+        startingScreen.style.display = 'none';
+        if (!isSpawningActive) {
+            startSpawning();
+        }
+    }
+});
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'w' || event.key === 'a' || event.key === 's' || event.key === 'd') {
+        if (isPaused) {
+            isPaused = false;
+            buttonImage.src = 'https://imagizer.imageshack.com/v2/361x361q70/r/924/sAFgKF.png';
+            startingScreen.style.display = 'none';
+            startSpawning();
+        }
+    }
+
+    if (event.key === 'w') keys.w = true;
+    if (event.key === 'a') keys.a = true;
+    if (event.key === 's') keys.s = true;
+    if (event.key === 'd') keys.d = true;
+});
+
+document.addEventListener('keyup', function(event) {
+    if (event.key === 'w') keys.w = false;
+    if (event.key === 'a') keys.a = false;
+    if (event.key === 's') keys.s = false;
+    if (event.key === 'd') keys.d = false;
+});
+
+document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+        isPaused = true;
+        buttonImage.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdRyxOH6cg2DlA-GPCASXmYlVia1Kt5U8fTw&s';
+        startingScreen.style.display = 'flex';
+        document.getElementById('startingText').innerText = 'The game is paused. Use WASD to unpause';
+    }
+});
+
+startGame(); // Start the game

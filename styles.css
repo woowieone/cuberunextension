@@ -4,13 +4,13 @@ body {
 }
 
 #gameArea {
-    position: relative;
-    width: 50vw; /* 50% of the viewport width */
-    height: 50vh; /* 50% of the viewport height */
+    position: absolute;
+    width: 70vw; /* 70% of the viewport width */
+    height: 70vh; /* 70% of the viewport height */
     background-color: black;
-    margin: auto; /* Center the game area */
-    top: 25vh; /* Position it vertically centered */
-    left: 25vw; /* Position it horizontally centered */
+    top: 15vh; /* Position it vertically centered */
+    left: 15vw; /* Position it horizontally centered */
+    border: 2px solid white; /* Optional: Add a border to visualize the game area */
 }
 
 .player {

@@ -2,15 +2,19 @@ body {
     margin: 0;
     overflow: hidden;
     box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
 }
 
 #gameArea {
-    position: absolute;
+    position: relative;
     width: 70vw; /* 70% of the viewport width */
     height: 70vh; /* 70% of the viewport height */
     background-color: black;
-    top: 15vh; /* Position it vertically centered */
-    left: 15vw; /* Position it horizontally centered */
     border: 2px solid white; /* Optional: Add a border to visualize the game area */
     box-sizing: border-box; /* Include border and padding in the element's total width and height */
 }

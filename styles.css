@@ -1,6 +1,7 @@
 body {
     margin: 0;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 #gameArea {
@@ -11,6 +12,7 @@ body {
     top: 15vh; /* Position it vertically centered */
     left: 15vw; /* Position it horizontally centered */
     border: 2px solid white; /* Optional: Add a border to visualize the game area */
+    box-sizing: border-box; /* Include border and padding in the element's total width and height */
 }
 
 .player {
@@ -20,6 +22,7 @@ body {
     background-color: blue;
     opacity: 1;
     z-index: 10;
+    box-sizing: border-box;
 }
 
 .enemy {
@@ -28,6 +31,7 @@ body {
     height: 30px;
     background-color: red;
     transition: background-color 0.3s;
+    box-sizing: border-box;
 }
 
 .power-up {
@@ -37,6 +41,7 @@ body {
     background-color: yellow;
     background-size: contain;
     background-repeat: no-repeat;
+    box-sizing: border-box;
 }
 
 .pixel {
@@ -45,6 +50,7 @@ body {
     height: 5px;
     background-color: blue;
     transition: transform 0.5s, opacity 0.5s;
+    box-sizing: border-box;
 }
 
 .trail {
@@ -54,6 +60,7 @@ body {
     background-color: rgba(255, 255, 255, 0.5);
     pointer-events: none;
     z-index: 5;
+    box-sizing: border-box;
 }
 
 #scoreBoard {
@@ -62,6 +69,7 @@ body {
     left: 5px;
     font-size: 24px;
     color: white;
+    box-sizing: border-box;
 }
 
 #highScoreBoard {
@@ -70,6 +78,7 @@ body {
     left: 5px;
     font-size: 24px;
     color: white;
+    box-sizing: border-box;
 }
 
 #pauseButton {
@@ -80,6 +89,7 @@ body {
     background: none;
     cursor: pointer;
     outline: none;
+    box-sizing: border-box;
 }
 
 #buttonImage {
@@ -100,6 +110,7 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 20;
+    box-sizing: border-box;
 }
 
 #startingText {

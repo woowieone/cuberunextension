@@ -1,24 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuberun</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CubeRun Extension</title>
+  <style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+
+    #gameArea {
+        position: relative;
+        width: 70vw; /* 70% of the viewport width */
+        height: 70vh; /* 70% of the viewport height */
+        background-color: black;
+        border: 2px solid white; /* Optional: Add a border to visualize the game area */
+        box-sizing: border-box; /* Include border and padding in the element's total width and height */
+    }
+
+    .player {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: blue;
+        opacity: 1;
+        z-index: 10;
+        box-sizing: border-box;
+    }
+
+    .enemy {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        transition: background-color 0.3s;
+        box-sizing: border-box;
+    }
+
+    .power-up {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: yellow;
+        background-size: contain;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+    }
+
+    .pixel {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background-color: blue;
+        transition: transform 0.5s, opacity 0.5s;
+        box-sizing: border-box;
+    }
+
+    .trail {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.5);
+        pointer-events: none;
+        z-index: 5;
+        box-sizing: border-box;
+    }
+
+    #scoreBoard {
+        position: absolute;
+        top: 0px;
+        left: 5px;
+        font-size: 24px;
+        color: white;
+        box-sizing: border-box;
+    }
+
+    #highScoreBoard {
+        position: absolute;
+        top: 25px;
+        left: 5px;
+        font-size: 24px;
+        color: white;
+        box-sizing: border-box;
+    }
+
+    #pauseButton {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        outline: none;
+        box-sizing: border-box;
+    }
+
+    #buttonImage {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
+
+    #startingScreen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 20;
+        box-sizing: border-box;
+    }
+
+    #startingText {
+        font-size: 24px;
+        color: white;
+    }
+
+    #logo {
+        width: 100px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
-    <div id="gameArea">
-        <div id="scoreBoard">Score: 0</div>
-        <div id="highScoreBoard">High Score: 0</div>
-        <div class="player" id="player"></div>
-        <button id="pauseButton">
-            <img src="https://imagizer.imageshack.com/v2/361x361q70/r/924/sAFgKF.png" alt="Pause" id="buttonImage">
-        </button>
-        <div id="startingScreen">
-            <img id="logo" src="https://imagizer.imageshack.com/v2/500x500q90/r/924/No6GcW.png" alt="Logo">
-            <div id="startingText">Use WASD to start game</div>
-        </div>
-    </div>
-    <script src="script.js"></script>
+  <div id="gameArea">
+    <!-- Your game content goes here -->
+  </div>
+  <div id="scoreBoard">Score: 0</div>
+  <div id="highScoreBoard">High Score: 0</div>
+  <button id="pauseButton"><img id="buttonImage" src="pause-icon.png" alt="Pause"></button>
+  <div id="startingScreen">
+    <img id="logo" src="logo.png" alt="Logo">
+    <div id="startingText">Press any key to start</div>
+  </div>
+  <script>
+    // Your game logic goes here
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize your game variables and start the game loop
+        console.log('Game started');
+    });
+  </script>
 </body>
 </html>

@@ -12,8 +12,7 @@ body {
 
 #gameArea {
     position: relative;
-    width: 70vw; /* 70% of the viewport width */
-    height: 70vh; /* 70% of the viewport height */
+    padding: 500px;
     background-color: black;
     border: 2px solid white; /* Optional: Add a border to visualize the game area */
     box-sizing: border-box; /* Include border and padding in the element's total width and height */

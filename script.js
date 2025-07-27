@@ -202,7 +202,7 @@ function checkPowerUpCollisions() {
             playerRect.x < powerUpRect.x + powerUpRect.width &&
             playerRect.x + playerRect.width > powerUpRect.x &&
             playerRect.y < powerUpRect.y + powerUpRect.height &&
-            playerRect.height + playerRect.y > powerUpRect.y
+            playerRect.height + powerUpRect.y > powerUpRect.y
         ) {
             handlePowerUp(powerUp);
         }
